@@ -16,7 +16,7 @@ class AdvertismentTableSeeder extends Seeder
     public function run()
     {
         //
-        //DB::table('advertisments')->delete();
+        DB::table('advertisments')->delete();
        
             $advertisments = array(
                 array('id' => '7','user_id' => '3','featured_image' => 'https://drive.google.com/uc?id=1ADR5NGTHICs-8NgF4TaEG6P5oAWzkEsq&export=media','first_image' => 'https://drive.google.com/uc?id=1Ayx4K6EtN1UBVgcIsJhk7cm3yjdUj57K&export=media','second_image' => 'https://drive.google.com/uc?id=19CYCCECuTYWg9Gqy1oB46WMG-JlZttqX&export=media','category_id' => '13','subcategory_id' => '12','childcategory_id' => '7','name' => 'Pizza peperoni','slug' => 'pizza-peperoni','description' => 'Pizza peperoni','price' => '55','price_status' => 'fixed','product_condition' => 'new','listing_location' => 'Pizza peperoni','country_id' => '4','state_id' => '165','city_id' => '6433','phone_number' => '555','published' => '1','link' => 'Pizza peperoni','created_at' => '2022-05-20 12:55:58','updated_at' => '2022-05-28 14:20:48'),
