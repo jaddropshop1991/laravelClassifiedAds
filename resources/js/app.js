@@ -80,7 +80,7 @@ let conversation = {
   <div class="col-md-2">
   <p v-for="(user,index) in users" :key="index">
     <span v-if="user.avatar">
-      <img :src=" '/storage/'+ (user.avatar.substring(7)) " width="80" style="border-radius:50% !important;">
+      <img :src=" user.avatar " width="80" style="border-radius:50% !important;">
 
     </span>
     <span v-else>
@@ -105,7 +105,7 @@ let conversation = {
                   <li class="sender clearfix" v-if="message.selfOwned" >
                    
                       <span class="chat-img left clearfix mx-2" v-if="message.user.avatar">
-                          <img :src=" '/storage/'+ (message.user.avatar.substring(7)) " width="60">
+                          <img :src=" message.user.avatar " width="60">
 
                       </span>
                       <span class="chat-img left clearfix mx-2" v-else>
@@ -131,7 +131,7 @@ let conversation = {
                           <p class="text-center" v-if="message.ads">
                               <a :href=" '/products/'+ message.ads.id+'/'+message.ads.slug " target="_blank">
                                   {{message.ads.name}}
-                                  <img :src=" '/storage/'+ (message.ads.featured_image.substring(7)) " width="120">
+                                  <img :src=" message.ads.featured_image " width="120">
                               </a>
 
                           </p>
@@ -147,7 +147,7 @@ let conversation = {
                   </li>
                   <li class="buyer clearfix" v-else>
                       <span class="chat-img right clearfix  mx-2" v-if="message.user.avatar">
-                         <img :src=" '/storage/'+ (message.user.avatar.substring(7)) " width="60">
+                         <img :src=" message.user.avatar " width="60">
 
                       </span>
                       <span class="chat-img right clearfix  mx-2" v-else>
@@ -168,7 +168,7 @@ let conversation = {
                        <p class="text-center" v-if="message.ads">
                               <a :href=" '/products/'+ message.ads.id+'/'+message.ads.slug " target="_blank">
                                   {{message.ads.name}}
-                                  <img :src=" '/storage/'+ (message.ads.featured_image.substring(7)) " width="120">
+                                  <img :src=" message.ads.featured_image " width="120">
                               </a>
 
                           </p>
