@@ -11,7 +11,7 @@ class MenuController extends Controller
     //
     public function menu(){
         //---------------------first category ad homepage slider----------------------
-        $category = Category::where('name', 'food')->first();
+        $category = Category::where('name', 'electronics')->first();
         $firstAds = Advertisment::where('category_id', $category->id)
         ->orderByDesc('id')->take(4)->get();
         $secondAds = Advertisment::where('category_id', $category->id)
@@ -21,7 +21,7 @@ class MenuController extends Controller
 
 
             //---------------------second category ad homepage slider----------------------
-        $category2 = Category::where('name', 'drinks')->first();
+        $category2 = Category::where('name', 'gaming')->first();
         $firstAdsCat2 = Advertisment::where('category_id', $category2->id)
         ->orderByDesc('id')->take(4)->get();
         $secondAdsCat2 = Advertisment::where('category_id', $category2->id)
@@ -30,7 +30,7 @@ class MenuController extends Controller
 
 
           //---------------------third category ad homepage slider----------------------
-         $category3 = Category::where('name', 'yyy')->first();
+         $category3 = Category::where('name', 'beauty')->first();
          $firstAdsCat3 = Advertisment::where('category_id', $category3->id)
          ->orderByDesc('id')->take(4)->get();
          $secondAdsCat3 = Advertisment::where('category_id', $category3->id)
