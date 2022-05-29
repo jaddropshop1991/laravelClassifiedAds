@@ -11,13 +11,15 @@ use App\Models\User;
 use Cohensive\Embed\Facades\Embed;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use App\Models\Childcategory;
+
 class Advertisment extends Model
 {
     use HasFactory;
     protected $guarded=[];
 
     public function childcategory(){
-        return $this->hasOne(childcategory::class, 'id','childcategory_id');
+        return $this->hasOne(Childcategory::class, 'id','childcategory_id');
     }
 //     protected $fillable = ['featured_image', 'first_image', 'second_image', 'slug', 'user_id','category_id',
 // 'subcategory_id','childcategory_id','name','description','price','price_status','product_condition','listing_location','country_id','state_id','city_id','phone_number','published','link'
